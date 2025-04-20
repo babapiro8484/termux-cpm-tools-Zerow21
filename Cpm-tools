@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Zerow21 Panel</title>
+  <style>
+    body { background-color: #1a1a2e; color: #fff; font-family: monospace; text-align: center; padding-top: 100px; }
+    input, button { padding: 10px; font-size: 16px; margin: 10px; }
+    .panel { background: #16213e; display: inline-block; padding: 40px; border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <div class="panel">
+    <h1>Zerow 21, Hoşgeldin. Keyini gir kral!</h1>
+    <input type="text" id="keyInput" placeholder="KEY: 4BBV12ZEROW">
+    <br>
+    <button onclick="checkKey()">Giriş Yap</button>
+    <p id="status"></p>
+  </div>
+  <script>
+    function checkKey() {
+      const key = document.getElementById('keyInput').value;
+      if (key === '4BBV12ZEROW') {
+        document.getElementById('status').innerText = 'Giriş başarılı!';
+      } else {
+        document.getElementById('status').innerText = 'Key yanlış kral!';
+      }
+    }
+  </script>
+</body>
+</html>
