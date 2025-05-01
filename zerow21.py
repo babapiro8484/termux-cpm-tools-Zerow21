@@ -2,7 +2,7 @@ import requests
 from time import sleep
 BASE_URL: str = "https://cpmelsedevshop.squareweb.app/api"
 
-class CPMElsedev:
+class ZEROW21:
 
     def __init__(self, access_key) -> None:
         self.auth_token = None
@@ -49,21 +49,11 @@ class CPMElsedev:
         response_decoded = response.json()
         return response_decoded
     
-    def set_player_money(self, amount) -> bool:
-        payload = {
-            "account_auth": self.auth_token,
-            "amount": amount
-        }
         params = { "key": self.access_key }
         response = requests.post(f"{BASE_URL}/set_money", params=params, data=payload)
         response_decoded = response.json()
         return response_decoded.get("ok")
-    
-    def set_player_coins(self, amount) -> bool:
-        payload = {
-            "account_auth": self.auth_token,
-            "amount": amount
-        }
+        
         params = { "key": self.access_key }
         response = requests.post(f"{BASE_URL}/set_coins", params=params, data=payload)
         response_decoded = response.json()
