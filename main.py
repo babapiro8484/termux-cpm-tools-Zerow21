@@ -11,10 +11,8 @@ from rich.style import Style
 import pystyle
 from pystyle import Colors, Colorate
 
-from cpmelsedev import CPMElsedev
+from zerow21 import zerow21
 
-__CHANNEL_USERNAME__ = "elsedevchannel"
-__GROUP_USERNAME__   = "elsedevchat"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
