@@ -6,7 +6,7 @@ pkg install git
 
 pkg install python -y
 
-git clone 
+git clone https://github.com/babapiro8484/termux-cpm-tools-Zerow21.git
 
 cd main.py
 
