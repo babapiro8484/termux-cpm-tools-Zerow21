@@ -11,6 +11,8 @@ from rich.style import Style
 import pystyle
 from pystyle import Colors, Colorate
 
+import cpmelsedev import cpmelsedev
+
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
     sys.exit(0)
