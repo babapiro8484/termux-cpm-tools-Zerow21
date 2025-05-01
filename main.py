@@ -11,9 +11,6 @@ from rich.style import Style
 import pystyle
 from pystyle import Colors, Colorate
 
-from zerow21 import zerow21
-
-
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
     sys.exit(0)
