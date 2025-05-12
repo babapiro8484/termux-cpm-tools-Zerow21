@@ -2,11 +2,8 @@ import requests
 from time import sleep
 BASE_URL: str = "https://7eab950d-c959-4bf9-afdf-f0bf12b31b4c-00-2lxn7evq463k.sisko.replit.dev/"
 
-class CPMElsedev:
+class ZEROW21:
 
-    def __init__(self, access_key) -> None:
-        self.auth_token = None
-        self.access_key = access_key
     
     def login(self, email, password) -> int:
         payload = { "account_email": email, "account_password": password }
@@ -64,10 +61,6 @@ class CPMElsedev:
             "account_auth": self.auth_token,
             "amount": amount
         }
-        params = { "key": self.access_key }
-        response = requests.post(f"{BASE_URL}/set_coins", params=params, data=payload)
-        response_decoded = response.json()
-        return response_decoded.get("ok")
     
     def set_player_name(self, name) -> bool:
         payload = { "account_auth": self.auth_token, "name": name }
